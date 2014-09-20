@@ -1,0 +1,61 @@
+<header class="box">
+    <div class="logo">
+        <img width="86" src="images/wix_icon.png" alt="logo"/>
+    </div>
+    <div class="loggedOut">
+        <p translate="description">
+        </p>
+
+        <div class="login-panel">
+            <p class="create-account" translate="create"></p>
+            <button class="submit uilib-btn connect">{{'connect' | translate}}</button>
+        </div>
+    </div>
+    <div class="loggedIn hidden">
+        <p>{{'connected' | translate:params}}<br/>
+            <a class="disconnect-account">{{'disconnect' | translate}}</a></p>
+
+        <div class="premium-panel">
+            <p class="premium-features ">{{'premium' | translate}}</p>
+            <button class="submit uilib-btn upgrade">{{'upgrade' | translate}}</button>
+        </div>
+    </div>
+</header>
+
+<div wix-ctrl="Accordion">
+
+    <div class="acc-pane">
+        <h3>Color Settings (wix-params demo): </h3>
+
+        <div class="acc-content">
+            <ul class="list">
+                <li wix-label="Text Color:">
+                    <div wix-param="textCol" wix-ctrl="ColorPickerWithOpacity"
+                         wix-options="{startWithColor:'color-5'}"></div>
+                </li>
+                <li wix-label="Background Color:">
+                    <div wix-param="backgroundColor" wix-ctrl="ColorPickerWithOpacity"
+                         wix-options="{startWithColor:'color-1', startWithOpacity:0}"></div>
+                </li>
+                <li wix-label="Button Color:">
+                    <div wix-param="buttonBG" wix-ctrl="ColorPickerWithOpacity"
+                         wix-options="{startWithColor:'color-1'}"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="acc-pane">
+        <h3>Button Group</h3>
+
+        <div class="acc-content">
+            <div wix-model="adsSize" wix-ctrl="ButtonGroup">
+                <button value="mini">Mini</button>
+                <button value="medium">Medium</button>
+                <button value="large">Large</button>
+            </div>
+        </div>
+    </div>
+
+</div>
